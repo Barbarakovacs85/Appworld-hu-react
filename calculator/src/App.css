@@ -8,7 +8,7 @@
 h1{
     position: absolute;
     top:0;
-    color: linear-gradient(to right, yellow, green);
+    color: green;
     
 }
 
@@ -20,14 +20,19 @@ h1{
     padding:10px;
     background-image: linear-gradient(to bottom left, rgba(230, 0, 255, 0.611), rgba(36, 201, 246, 0.684));
     box-shadow: inset 10px 5px 5px rgba(3, 27, 102, 0.5), 10px 5px 5px rgba(3, 27, 102, 0.5);
+
 }
 input[type="text"] {
     width: 220px;
     height: 60px;
     margin-top:5px;
     border-radius: 10px;
+    padding-right: 15px;
     box-shadow: inset 5px 5px 5px rgba(133, 129, 129, 0.5),5px 5px 5px rgba(3, 27, 102, 0.5);
     background-color: #37283a;
+    color:#fff;
+    text-align: right;
+    font-size: 20px;
 }
 .keypad {
     padding-top:5px;
