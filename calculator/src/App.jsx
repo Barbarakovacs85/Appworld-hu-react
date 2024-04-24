@@ -30,10 +30,8 @@ function App() {
       <h1>Számológép</h1>
 
       <div className="container">
-        <form>
-          <Display total={total} />
-        </form>
-
+        
+        <Display total={total} />
         <Buttons clear={clear} handleDelete={handleDelete} handleClick={handleClick} calculate={calculate} />
       </div>
     </div>
