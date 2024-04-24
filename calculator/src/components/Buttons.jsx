@@ -5,7 +5,7 @@ function Buttons({ clear, handleDelete, handleClick, calculate }) {
     <div className="keypad">
       <button onClick={clear} id="clear" className='highlight'>DC</button>
       <button onClick={handleDelete} className='highlight'>Del</button>
-      <button name='/' onClick={handleClick} className='highlight' dangerouslySetInnerHTML={{ __html: "&divide;" }}></button>
+      <button name='/' onClick={handleClick} className='highlight'>÷</button>
 
       <button name='7' onClick={handleClick}>7</button>
       <button name='8' onClick={handleClick}>8</button>

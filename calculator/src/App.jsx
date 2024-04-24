@@ -5,20 +5,15 @@ import './App.css';
 
 function App() {
   const [total, setTotal] = useState('');
-  const [lastButton, setlastButton] = useState('0');
-
+  const [lastButtonIsEqual, setlastButtonIsEqual] = useState(false);
   const handleClick = (e) => {
-    setlastButton(e.target.name);
-    
-    setTotal(lastButton == null ? 0: total.concat(e.target.name));
+   setTotal(
+      lastButtonIsEqual === true && !isNaN(parseInt(e.target.name)) 
+      ? (e.target.name): total.concat(e.target.name));
+      setlastButtonIsEqual(false)
   }
-  const clear = () => {
-    setTotal("");
-  }
-
-  function handleDelete() {
-    setTotal(total.slice(0,-1));
-  }
+  const clear = () => {setTotal("");}
+  function handleDelete() {setTotal(total.slice(0,-1));}
 
   const calculate = () => {
     try {
@@ -26,14 +21,13 @@ function App() {
     } catch {
       setTotal("Error");
     }
+    setlastButtonIsEqual(true)
   }
 
   return (
     <div className="App">
       <h1>Számológép</h1>
-
       <div className="container">
-        {lastButton}
         <Display total={total} />
         <Buttons clear={clear} handleDelete={handleDelete} handleClick={handleClick} calculate={calculate} />
       </div>
